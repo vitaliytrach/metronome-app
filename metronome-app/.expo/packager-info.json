@@ -1,10 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "packagerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerPort": 19000,
+  "packagerPort": 19000,
+  "expoServerNgrokUrl": "https://3p-riz.anonymous.metronome-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.3p-riz.anonymous.metronome-app.exp.direct",
+  "ngrokPid": 51823,
   "packagerPid": null,
   "webpackServerPort": null
 }

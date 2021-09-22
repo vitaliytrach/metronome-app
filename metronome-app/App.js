@@ -1,21 +1,42 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import Set from './components/Set';
 
 export default function App() {
   return (
     <View style={styles.container}>
 
-      <View style={styles.tasksWrapper}>
-        <Text style={styles.sectionTitle}>Song Sets</Text>
+      <View style={styles.addContainer}>
 
-        <View style={styles.items}>
-          {/* This is where the sets go */}
-          <Set text={'09/10/21'} />
-          <Set text={'09/15/21'} />
-          <Set text={'10/08/21'} />
+        {/* Set Name */}
+        <View style={styles.row}>
+          <Text style={styles.text}>Set Name</Text>
+          <TextInput style={styles.textbox}/>
         </View>
+
+        {/* Title */}
+        <View style={styles.row}>
+          <Text style={styles.text}>Title</Text>
+          <TextInput style={styles.textbox}/>
+        </View>
+
+        {/* 4/4 6/8 */}
+        <View style={styles.rowBPM}>
+          <Text style={styles.bpmText}>4/4</Text>
+          <Text style={styles.bpmText}>6/8</Text>
+        </View>
+
+        {/* Bpm */}
+        <View style={styles.row}>
+          <Text style={styles.text}>Bpm</Text>
+          <TextInput style={styles.textbox}/>
+        </View>
+        <Button title="Add" />
+      </View>
+
+      <View style={styles.songListContainer}>
+
       </View>
 
     </View>
@@ -34,13 +55,38 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffc30f'
   },
-  tasksWrapper: {
-    paddingTop: 80,
-    paddingHorizontal: 20
+  songListContainer: {
+    flex: 1,
+    backgroundColor: 'salmon'
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: 'bold'
+  addContainer: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-evenly',
+    margin: 10
   },
-  items: {},
+  row: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 10,
+    marginBottom: 10
+  },
+  rowBPM: {
+    display: 'flex',
+    flexDirection: 'row',
+    marginTop: 20,
+    justifyContent: 'space-evenly'
+  },
+  textbox: {
+    flex:1,
+    backgroundColor: 'black'
+  },
+  text: {
+    flex: 1
+  },
+  bpmText: {
+    padding: 10,
+    backgroundColor: 'white'
+  }
 });
