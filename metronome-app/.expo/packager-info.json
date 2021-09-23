@@ -6,5 +6,5 @@
   "packagerNgrokUrl": "https://packager.3p-riz.anonymous.metronome-app.exp.direct",
   "ngrokPid": 51823,
   "packagerPid": null,
-  "webpackServerPort": null
+  "webpackServerPort": 19006
 }

@@ -2,24 +2,20 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 import Set from './components/Set';
+import Row from './components/Row';
 
 export default function App() {
+
   return (
     <View style={styles.container}>
 
       <View style={styles.addContainer}>
 
         {/* Set Name */}
-        <View style={styles.row}>
-          <Text style={styles.text}>Set Name</Text>
-          <TextInput style={styles.textbox}/>
-        </View>
+        <Row title="Set Name" />
 
-        {/* Title */}
-        <View style={styles.row}>
-          <Text style={styles.text}>Title</Text>
-          <TextInput style={styles.textbox}/>
-        </View>
+        {/* Title  */}
+        <Row title="Song Title" />
 
         {/* 4/4 6/8 */}
         <View style={styles.rowBPM}>
@@ -28,10 +24,8 @@ export default function App() {
         </View>
 
         {/* Bpm */}
-        <View style={styles.row}>
-          <Text style={styles.text}>Bpm</Text>
-          <TextInput style={styles.textbox}/>
-        </View>
+        <Row title="BPM" />
+
         <Button title="Add" />
       </View>
 
